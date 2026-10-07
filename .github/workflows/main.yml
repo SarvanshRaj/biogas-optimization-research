@@ -1,9 +1,8 @@
-name: Extract uploaded ZIP
-
+name: Auto-extract ZIP
 on:
   push:
     paths:
-      - "upload.zip"
+      - '**/*.zip'
 
 permissions:
   contents: write
@@ -13,18 +12,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-
-      - name: Extract and save files
+      - name: Extract and clean up
         run: |
-          python3 -m zipfile -e upload.zip project
-
+          mkdir -p extracted
+          for zip in $(find . -name "*.zip"); do
+            unzip -o "$zip" -d extracted/
+            rm "$zip"
+          done
+      - name: Commit files
+        run: |
           git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-
-          git add project
-          if git diff --cached --quiet; then
-            exit 0
-          fi
-
-          git commit -m "Extract uploaded project"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add extracted/
+          git commit -m "Extract ZIP contents" || echo "No changes"
           git push

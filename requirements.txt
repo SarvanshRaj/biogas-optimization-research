@@ -1,0 +1,21 @@
+# Runtime dependencies for the simulated two-stage food-waste-to-biogas study.
+# Pins are bounded (>= tested, < next major) so the study stays reproducible without freezing
+# transitive dependencies. Every version below is the one the study was built and tested with.
+#
+#   install (this sandbox image is externally managed, hence the flag):
+#     python3 -m pip install --break-system-packages -r requirements.txt
+
+numpy>=2.4,<3
+pandas>=3.0,<4
+scikit-learn>=1.9,<2
+scipy>=1.17,<2
+matplotlib>=3.11,<4
+joblib>=1.6,<2
+
+# Development / verification tooling (see .github/workflows/ci.yml)
+pytest>=9.1,<10
+pytest-cov>=7.1,<8
+hypothesis>=6.168,<7
+ruff>=0.16,<1
+mypy>=2.4,<3
+scikit-learn-stubs>=0.0.3   # real types for scikit-learn instead of a silenced import

@@ -15,13 +15,6 @@ Two warnings belong at the top, because they decide how to read the rest.
 2. The optimiser searches the simulator, so its best mixture is a property of my equations. It is
    simulator-specific and it is not a real recipe.
 
-**How this was made.** I built the project with help from an AI coding assistant (Arena.ai Agent
-Mode), which drafted code, tests and documentation under my direction and reviewed nothing on its
-own. The plan, the falsifiers, the parameter decisions and the acceptance criteria are
-mine, and I fixed them before the results existed, so the definition of success could not drift
-afterwards. If a school or programme needs a disclosure statement, this paragraph is the one to
-quote. Nothing here should be graded higher because a tool helped produce it.
-
 ---
 
 ## 1. Study question and scope

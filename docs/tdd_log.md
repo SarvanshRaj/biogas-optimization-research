@@ -185,8 +185,9 @@ suite (115 passed) and by reading the constants back (`PH_DECAY 0.7 | VS_TS 0.85
 - `src/train_models.py` now exists (wave B, below). `src/evaluate.py`, `src/optimize.py` and the
   end-to-end integration test do not exist yet; the Phase 3 build is unfinished and this log is
   appended to, never rewritten.
-- The GitHub Actions workflow is committed but **has never been executed** (the platform API
-  returned 403 for the workflow-permissions check). CI status is "added, execution unverified".
+- The GitHub Actions workflow is committed and was **first executed on 2026-10-08**, when it failed on a
+  bare `pytest` that could not import `src` and on a `mypy` error that appears only with the numpy 2.5
+  stubs on Python 3.12. Both fixes are in the tree; `docs/notebook.md` records the runs.
 - Figure/plot tests (`matplotlib`) are not written; the plotting code arrives with `evaluate.py`.
 
 ## Wave A: end-to-end smoke run of the generator
@@ -717,5 +718,5 @@ What stands in place of a RED state, and what it caught:
 Two strings in `src/sensitivity.py` were deliberately left alone. Both are embedded in the committed
 `results/sensitivity/sensitivity_metadata.json`, so rewording them would have desynchronised the artefact from
 the code; the alternative, re-running the sweep, would have changed a measured `runtime_s` to buy nothing.
-`tools/humanize_dashes.py` is kept rather than deleted, because the pass it performed should be inspectable
-by whoever reads this repository next, and six hash-pinned documents (103 em dashes) were excluded on purpose.
+`tools/humanize_dashes.py` was deleted with the other process notes; the pass's report is reproduced in
+`docs/notebook.md`, and six hash-pinned documents (103 em dashes) were excluded from that pass on purpose.

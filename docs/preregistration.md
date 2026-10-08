@@ -1,12 +1,12 @@
 # PREREGISTRATION, two-stage food-waste-to-biogas simulation study
 
-**File:** `docs/preregistration.md` · **Locked as** `PREREG_V1` in `docs/notebook/prereg_v1.md` (hash + timestamp)
-**Label:** INTERNAL · **Owner:** Sarvansh Raj · **Date:** 2026-10-07 · **Branch:** `arena/42ddb257-biogas-optimization-research`
+**File:** `docs/preregistration.md` · **Locked as** `PREREG_V1` before any evidence was gathered; the hash and the record are in `docs/notebook.md`
+**Label:** INTERNAL · **Owner:** Sarvansh Raj · **Date:** 2026-10-07 · **Branch:** `main`
 **Status:** written before any evidence was gathered and before any implementation code existed.
 
-Written before any evidence was gathered and before any implementation code existed.
-([GENOME]), traced in `docs/requirements_traceability.md`. Where they conflict, the resolutions in that
-file's decision register apply; nothing here silently overrides them.
+Written before any evidence was gathered and before any implementation code existed. Its requirements
+are traced in `docs/requirements_traceability.md`. Where they conflict, the resolutions in that file's
+decision register apply; nothing here silently overrides them.
 
 ---
 

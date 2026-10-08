@@ -73,9 +73,9 @@ def f_temperature(temperature: np.ndarray) -> np.ndarray:
 def f_ph(ph: np.ndarray) -> np.ndarray:
     """Plateau at the sourced optimum band, Gaussian penalty outside it (width ASSUMPTION)."""
     p = np.asarray(ph, dtype=float)
-    distance = np.maximum.reduce(
-        [np.zeros_like(p), config.PH_LOW - p, p - config.PH_HIGH]
-    )
+    # Nested maximum instead of np.maximum.reduce([...]): the ufunc's reduce overloads reject a
+    # list argument under the numpy 2.5 stubs, which fails the mypy job on Python 3.12.
+    distance = np.maximum(np.maximum(p - config.PH_HIGH, config.PH_LOW - p), 0.0)
     return np.exp(-((distance / config.PH_DECAY) ** 2))
 
 

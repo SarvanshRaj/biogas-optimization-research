@@ -31,8 +31,12 @@ python -m src.sensitivity --seed 11 --n-scenarios 250 --models ridge,hist_gradie
 
 Built with Python 3.11.2, numpy 2.4.6, pandas 3.0.6, scikit-learn 1.9.1, scipy 1.17.1, matplotlib
 3.11.2, pytest 9.1.1, hypothesis 6.168.5, pytest-cov 7.1.0, ruff 0.16.10, mypy 2.4.0.
-`.github/workflows/ci.yml` runs the same commands; it has not executed on GitHub (the permissions
-check returned 403), so CI is added but unverified.
+`.github/workflows/ci.yml` runs the same commands on Python 3.11 and 3.12, plus a small end-to-end
+simulation of its own. It runs on every push. The first runs on GitHub, on 8 October 2026, failed twice
+for reasons that only appear on a clean runner: a bare `pytest` could not import `src` (fixed with
+`pythonpath` in `pyproject.toml`), and on 3.12 `mypy` rejected a `np.maximum.reduce([...])` call that the
+numpy 2.5 stubs type more strictly (rewritten as a nested `np.maximum`). Both fixes are in the tree;
+the runs that follow them have not happened yet.
 
 ## Layout
 
@@ -95,7 +99,7 @@ was part of it and no data from it appears here.
 
 That roadmap needs laboratory and hardware work. None of it is delivered here.
 
-## Licence and disclosure
+## Licence
 
 Code (`src/`, `tests/`, `.github/`, configuration) is MIT, see `LICENSE`. Written material
 (`report.md`, `docs/`, `results/`, the data documentation) is CC BY 4.0, see `LICENSE-docs`.

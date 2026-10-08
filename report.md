@@ -50,7 +50,7 @@ I fixed these before collecting any evidence.
 
 | # | Question | How it was settled | Where to check |
 |---|---|---|---|
-| Q1 | Which inputs are defensible, and which are unsupported or redundant? | A provenance table gives every input a class (`direct`, `analogous` or `assumption`), a source and a sensitivity range. Ambient relative humidity is excluded for lack of support. Redundancy between OLR and total solids, and between the inoculum ratio and OLR, is tested rather than assumed: the largest non-composition correlation in the design is 0.057 | `docs/parameter_table.md`, `docs/notebook/test_log.md` |
+| Q1 | Which inputs are defensible, and which are unsupported or redundant? | A provenance table gives every input a class (`direct`, `analogous` or `assumption`), a source and a sensitivity range. Ambient relative humidity is excluded for lack of support. Redundancy between OLR and total solids, and between the inoculum ratio and OLR, is tested rather than assumed: the largest non-composition correlation in the design is 0.057 | `docs/parameter_table.md`, `tests/test_simulate_data.py` (the correlation and documented-redundancy tests) |
 | Q2 | How do I represent pre-treatment without assuming it helps? | A signed latent factor, uniform over 0.70 to 1.60 and centred on 1.00, so harmful, neutral and beneficial cases all occur. The sweep tests the direction explicitly at 0.90, 1.00 and 1.10 | `docs/model_specification.md` section 3.1, `tests/test_properties.py`, the sweep row `pretreatment_response` |
 | Q3 | Is the ground truth transparent, bounded, reproducible and nonlinear enough for a model comparison to mean something? | The ground truth is a bounded product of documented factors with declared noise. Whether it is nonlinear enough is audited by rule F3 rather than asserted | `docs/model_specification.md` section 3, and section 7 of this report |
 | Q4 | How does the split avoid leakage between near-duplicate rows? | Scenarios are the unit of splitting. All eight replicates of one scenario stay in the same split, and the two latent factors that generate the pre-treatment effect are never written to the model-facing file | `tests/test_preprocess_leakage.py`, `tests/test_ood_split_validation.py` |
@@ -414,8 +414,10 @@ tests pin every constant they declare, so a drift in either is caught rather tha
 
 Four things about this environment should be stated rather than smoothed over. Sandbox restarts
 flattened my local Git history twice, so the reconstruction is a labelled recovery commit and the
-commit identifiers are local to that machine. The GitHub Actions workflow has never executed, because
-the permissions check returned 403, so CI is added and unverified. Mutation testing was done by hand
+commit identifiers are local to that machine. The GitHub Actions workflow first executed on 8 October
+2026, when it failed twice on problems that only appear on a clean runner: a `pytest` import path, and a
+`mypy` error under the numpy 2.5 stubs on Python 3.12. Both are fixed in the tree, and the runs that
+follow the fixes have not happened yet. Mutation testing was done by hand
 only: four mutants in the final wave, all killed, with earlier waves recorded honestly, including one
 mutant that survived and was then killed by a new test. And five written claims turned out wrong when
 I re-measured them, and are corrected in place with the corrections visible: a mutation table whose

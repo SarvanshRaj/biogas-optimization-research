@@ -206,11 +206,12 @@ data, the claims and the process: nothing in it is scored favourably for being s
 
 1. Write `tests/` covering §1 in order: config → validation → generation → split/preprocessing → models →
    metrics → optimiser → CLI.
-2. Run `pytest -q` **before** implementing each module; capture the failure output into `test_log.md`
+2. Run `pytest -q` **before** implementing each module; capture the failure output into the RED-evidence
+   log (`docs/tdd_log.md`)
    (this is the RED evidence; without it the work is not TDD-complete).
 3. Implement the minimum that turns the target tests green.
 4. Refactor only with the suite green; re-run and append evidence.
-5. Record the exact commands, pass/fail counts, coverage and any blocked check in `test_log.md`.
+5. Record the exact commands, pass/fail counts, coverage and any blocked check in `docs/tdd_log.md`.
 
 ---
 

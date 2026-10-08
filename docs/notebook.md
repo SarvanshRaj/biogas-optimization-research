@@ -40,11 +40,17 @@ memory.
 
 ## Things that are blocked, not done
 
-- **GitHub Actions has never run.** The workflow is committed and mirrors the local commands, but the API
-  check from this environment returned 403, so CI is added and unverified.
+- **GitHub Actions ran for the first time on 2026-10-08** and failed twice, both times on something that
+  only exists on a clean runner: a bare `pytest` could not import `src` (fixed with a `pythonpath` entry
+  in `pyproject.toml`), and on Python 3.12 `mypy` rejected the `np.maximum.reduce([...])` call in
+  `src/simulate_data.py` because the numpy 2.5 stubs type it differently (rewritten as a nested
+  `np.maximum`, checked against both the 2.4 and the 2.5 stub sets). The runs after those two fixes had
+  not happened when this was written.
 - **Mutation testing was done by hand.** Four mutants in the final wave, four killed, each with its observed
   failure counts. No mutation tool was available, and none is claimed.
-- **Nothing was pushed.** The remote `main` is still at `4c3c9cf`. The delivery is a files-only archive.
+- **Nothing was pushed by the assistant.** The delivery was a files-only archive with no history, and the
+  author uploaded it to `github.com/SarvanshRaj/biogas-optimization-research` himself. The commits on
+  `main` from 2026-10-08 onward are his.
 - **The sandbox restarted twice** during the work, which flattened the local commit history and is why there
   is a labelled recovery commit. The commit identifiers are local to that machine.
 
@@ -88,13 +94,15 @@ Two places were left alone on purpose: the strings in `src/sensitivity.py` that 
 `results/sensitivity/sensitivity_metadata.json`, since editing them would put the code and the artefact out
 of step, and the vocabulary `SIMULATED`, which appears on every artefact and is not stylistic.
 
-What did not change: every number, every citation, every `SIMULATED` label, the gate outcomes, and the
-statement that this work was built with AI assistance.
+What did not change: every number, every citation, every `SIMULATED` label, and the gate outcomes. The
+AI-assistance paragraphs that the report and the README carried at the time were later removed by the
+author; that edit and the others that followed this trim are recorded below.
 
 ## Hashes of the plan documents
 
 Recorded on 2026-10-07, after the trim. Where a document was edited for wording or paths, the prefix from
-before the edit is shown for comparison.
+before the edit is shown for comparison. Two of these documents were edited again on 2026-10-08; their
+current prefixes are at the end of this file.
 
 | Document | SHA-256 prefix now | Before the edit |
 |---|---|---|
@@ -107,3 +115,42 @@ before the edit is shown for comparison.
 
 The archive is built straight from the delivery commit, so its entry count and size are stated in the
 hand-over message rather than here: a file cannot report the size of the archive that contains it.
+
+## Edits after the trim, 2026-10-08
+
+A second pass over the same files, made after the repository was uploaded to GitHub. Nothing in it touches
+a research question, a falsifier, a threshold or a decision rule.
+
+- The paragraphs that disclosed AI assistance in `README.md` and `report.md` were removed by the author.
+  `docs/requirements_traceability.md` therefore records R24 as **not met**, which is the honest status for
+  a requirement whose delivered item no longer exists.
+- `docs/preregistration.md` named a working branch that no longer exists and pointed at a lock record the
+  trim had deleted. Both now describe what survives.
+- The same file carried a leftover placeholder label, and `docs/sources.json` named the citation rule by
+  that same label. Neither meant anything outside the planning notes, so both now state the rule itself.
+- `report.md` and `docs/test_matrix.md` sent readers to `docs/notebook/test_log.md`, which the trim
+  deleted. They now point at `tests/test_simulate_data.py` and `docs/tdd_log.md`.
+- `docs/tdd_log.md` said the dash helper was kept rather than deleted. It was deleted; the sentence and
+  the tree now agree.
+- The claim that `.github/workflows/ci.yml` had never run was true when written and false from 2026-10-08,
+  when the workflow first executed on GitHub and failed twice: a bare `pytest` could not import `src`,
+  and on Python 3.12 `mypy` rejected a `np.maximum.reduce([...])` call that the numpy 2.5 stubs type more
+  strictly. Both are fixed in the tree, with `pythonpath` in `pyproject.toml` and a nested `np.maximum` in
+  `src/simulate_data.py`. The runs that follow the fixes had not happened when this was written.
+- The same false claim appeared in six places (`README.md`, the workflow header, `docs/notebook.md`,
+  `docs/phase6_audit.md` twice, `docs/tdd_log.md`, and `report.md` §10); all six now say what happened.
+
+Hashes after the 8 October edits:
+
+| Document | SHA-256 prefix now | On 2026-10-07 |
+|---|---|---|
+| `docs/preregistration.md` | `04e8ec9daaff3f77` | `1a2085cc05219063` |
+| `docs/test_matrix.md` | `523a4e00499f3bb9` | `60596e05baa98024` |
+
+The other four plan documents are byte-identical to their 7 October state, so their recorded prefixes
+(`e8e4b998ebaecbe5`, `17e5d083bea7d09f`, `b8ba33b0df333ff8`, `686a0d5921190c85`) did not move.
+
+Those frozen documents still name files that the trim removed (`docs/child_prompt_template.md`, the
+`docs/notebook/` tree). That is deliberate: they record what the lock created and what the
+pre-registration instructed at the time, and editing them would invalidate the hashes they are pinned by.
+The mapping from the removed files to what replaced them is in the trim section above.

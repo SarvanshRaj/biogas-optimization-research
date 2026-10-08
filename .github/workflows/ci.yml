@@ -2,8 +2,10 @@ name: CI
 
 # Static checks, the test suite and the coverage gate for the simulation study.
 #
-# This mirrors the commands run locally. It has not been executed on GitHub: the API check from
-# this environment returned 403, so the workflow itself is unverified.
+# This mirrors the commands run locally. The first runs on GitHub, on 2026-10-08, exposed two
+# runner-only problems, both fixed in the tree: a bare `pytest` that could not import `src` (the
+# `pythonpath` entry in pyproject.toml) and a mypy error that appears only with numpy 2.5 on
+# Python 3.12 (a rewritten `np.maximum.reduce` call in src/simulate_data.py).
 
 on:
   push:

@@ -99,8 +99,3 @@ That roadmap needs laboratory and hardware work. None of it is delivered here.
 
 Code (`src/`, `tests/`, `.github/`, configuration) is MIT, see `LICENSE`. Written material
 (`report.md`, `docs/`, `results/`, the data documentation) is CC BY 4.0, see `LICENSE-docs`.
-
-I built this with an AI coding assistant (Arena.ai Agent Mode), which drafted code, tests and
-documentation under my direction and review. The plan, the decisions and the acceptance criteria are
-mine, and they were fixed before results existed. If a school or programme needs a disclosure
-statement, quote this paragraph.

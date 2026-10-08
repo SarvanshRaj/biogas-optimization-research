@@ -1,0 +1,26 @@
+{
+  "as_of": "2026-10-07",
+  "data_provenance": "synthetic",
+  "f3_best_tree": "hist_gradient_boosting",
+  "f3_best_tree_mean_r2": 0.8123691926311192,
+  "f3_fires": false,
+  "f3_ridge_mean_r2": 0.4540072355451885,
+  "f3_rule": "if Ridge's mean test R2 reaches 95% of the best tree's mean test R2, the comparison is uninformative",
+  "f3_threshold": 0.95,
+  "f3_verdict": "informative - the nonlinear models earn their place",
+  "f7_best_model": "hist_gradient_boosting",
+  "f7_best_model_range": [
+    0.775302401541915,
+    0.8663790611571041
+  ],
+  "f7_dummy_range": [
+    -0.04393366110245256,
+    -0.010302146854250571
+  ],
+  "f7_fires": false,
+  "f7_rule": "if the best model's range of test R2 across seeds overlaps the dummy baseline's range, the apparent skill is reported as seed-dependent",
+  "f7_verdict": "stable - the best model clears the baseline's spread",
+  "n_test_rows": 25,
+  "simulated": true,
+  "simulator_version": "SPEC_V1"
+}

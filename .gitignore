@@ -1,0 +1,31 @@
+# Python / tooling caches — never project artefacts
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+*.egg-info/
+.venv/
+
+# Coverage and test-run outputs
+.coverage
+.coverage.*
+coverage.xml
+htmlcov/
+
+# Fitted model binaries: fully regenerable from the pinned seeds and the frozen simulator,
+# and the repository's convention is to keep generated binaries out of Git.
+results/models/*.joblib
+
+# Generated synthetic data IS committed (the deliverable list requires data/synthetic/ CSVs, and
+# `tests/test_integration_e2e.py::test_the_committed_dataset_is_what_the_generator_produces_today`
+# re-derives every committed row from the frozen simulator, so a stale dataset cannot survive).
+#
+# The rule that was declared before the files existed, now satisfied: the whole set (5 seeds x
+# 4000 rows + 5 x 480 held-out rows + latent factors + metadata) measures 9.5 MiB, under the
+# stated 10 MB threshold. The two ignore lines that held this directory empty were removed in
+# Phase 3 wave F, exactly as the note here said they would be.
+
+# Hypothesis example database
+.hypothesis/

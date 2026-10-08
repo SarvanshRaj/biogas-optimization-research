@@ -1,0 +1,69 @@
+name: CI
+
+# Static checks, the test suite and the coverage gate for the simulation study.
+#
+# This mirrors the commands run locally. It has not been executed on GitHub: the API check from
+# this environment returned 403, so the workflow itself is unverified.
+
+on:
+  push:
+    branches: ['**']
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ['3.11', '3.12']
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: pip
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -r requirements.txt pandas-stubs
+
+      - name: Static analysis (ruff)
+        run: ruff check src tests
+
+      - name: Type checking (mypy)
+        run: mypy
+
+      - name: Tests with statement+branch coverage gate
+        run: pytest --cov=src --cov-branch --cov-report=term-missing --cov-report=xml
+
+      - name: Upload coverage report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: coverage-${{ matrix.python-version }}
+          path: coverage.xml
+          if-no-files-found: warn
+
+  end-to-end:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install -r requirements.txt
+      - name: Small end-to-end simulation run (one seed, held-out family)
+        run: python -m src.simulate_data --seed 11 --n-scenarios 30 --ood --outdir /tmp/ci_synthetic
+      - name: Assert the SIMULATED labelling survived the round trip
+        run: |
+          python - <<'PY'
+          import json, pathlib
+          meta = json.loads(pathlib.Path("/tmp/ci_synthetic/metadata_seed11.json").read_text())
+          assert meta["data_provenance"] == "synthetic"
+          assert "SIMULATED" in meta["scale_adoption_note"].upper()
+          print("labelling check passed")
+          PY

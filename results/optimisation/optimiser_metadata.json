@@ -1,0 +1,47 @@
+{
+  "as_of": "2026-10-07",
+  "baseline_declared": {
+    "feasible": false,
+    "label": "declared equal-thirds baseline (decision D6)",
+    "true_yield": 313.6987907296185,
+    "violations": [
+      "C-b",
+      "C-c",
+      "C-e"
+    ]
+  },
+  "baseline_feasible_reference": {
+    "distance_to_equal_thirds": 0.3487686275391691,
+    "feasible": true,
+    "label": "feasible projection of equal thirds at the same process settings (closest feasible grid point; pre-declared comparator)",
+    "true_yield": 365.76572835446024
+  },
+  "caveat": "This optimiser maximises a simulator, so it can and will exploit the simulator's artefacts. The 'best' values below are a property of this synthetic surface; the best recipe is not a real recipe, has never been tested on real food waste, and is reported with its perturbation behaviour so that a fragile optimum is visible as such.",
+  "data_provenance": "synthetic",
+  "models": [
+    "dummy",
+    "ridge",
+    "random_forest",
+    "hist_gradient_boosting",
+    "mlp"
+  ],
+  "n_scenarios": 500,
+  "package_versions": {
+    "numpy": "2.4.6",
+    "pandas": "3.0.6",
+    "scipy": "1.17.1"
+  },
+  "penalty_per_unit_violation": 10000.0,
+  "reference_latent": {
+    "degradable_mass_loss": 0.1,
+    "pretreatment_response": 1.0
+  },
+  "scope_note": "Objective = simulated_methane_yield_ml_per_g_vs from src/simulate_data.py (SPEC_V1), evaluated at reference latent values (response 1.0, mass loss 0.1) on synthetic data. Nothing here is a measurement, a design, or a recommendation for a real digester.",
+  "seed": 11,
+  "simulated": true,
+  "simulator_version": "SPEC_V1",
+  "tiers": [
+    "C1",
+    "C1+C2"
+  ]
+}

@@ -1,0 +1,102 @@
+{
+  "as_of": "2026-10-07",
+  "assumption_notes": {
+    "beta": {
+      "label": "beta (biodegradability)",
+      "note": "multiplies the degradable fraction; a purely multiplicative ceiling change",
+      "source": "SPEC_V1 11 row 1"
+    },
+    "eta_lcfa": {
+      "label": "eta (LCFA partition)",
+      "note": "fraction of lipid appearing as inhibitory LCFA",
+      "source": "SPEC_V1 11 row 2"
+    },
+    "k_ref": {
+      "label": "k_ref",
+      "note": "first-order rate constant; changes how much of the ceiling the window completes",
+      "source": "SPEC_V1 11 row 5"
+    },
+    "lcfa_half": {
+      "label": "LCFA half-saturation",
+      "note": "concentration at which the LCFA penalty halves; never resolved by the sources",
+      "source": "SPEC_V1 11 row 3"
+    },
+    "missingness": {
+      "label": "missingness rate",
+      "note": "the specification prints a single rate, while the frozen simulator carries two (2 % for pH and 1.5 % for temperature). The nominal level therefore keeps the simulator's pair, so that a delta of exactly zero is measurable, and the 0 % / 5 % levels set both rates. This wording gap is recorded rather than resolved silently",
+      "source": "SPEC_V1 11 row 10"
+    },
+    "noise_scale": {
+      "label": "noise scale",
+      "note": "both sigmas scaled together",
+      "source": "SPEC_V1 11 row 9"
+    },
+    "pretreatment_response": {
+      "label": "pre-treatment response distribution",
+      "note": "the whole point of Q2: the response distribution is swept, never assumed beneficial",
+      "source": "SPEC_V1 11 row 8"
+    },
+    "sigma_t_meso": {
+      "label": "sigma_T mesophilic",
+      "note": "width of the mesophilic temperature optimum",
+      "source": "SPEC_V1 11 row 6"
+    },
+    "tan_half": {
+      "label": "TAN half-saturation",
+      "note": "the ammonia threshold spread is carried rather than resolved",
+      "source": "SPEC_V1 11 row 4"
+    },
+    "ts_shape": {
+      "label": "TS shape",
+      "note": "the total-solids direction is contested (claim C-005); this is where it is probed",
+      "source": "SPEC_V1 11 row 7"
+    }
+  },
+  "assumptions": [
+    "beta",
+    "eta_lcfa",
+    "lcfa_half",
+    "tan_half",
+    "k_ref",
+    "sigma_t_meso",
+    "ts_shape",
+    "pretreatment_response",
+    "noise_scale",
+    "missingness"
+  ],
+  "caveat": "These numbers describe how sensitive the SIMULATOR is to its own assumptions. They are not measurements, they do not transfer to real food waste or real digesters, and a small sensitivity here means the assumption matters little *in this model*, not that it is unimportant in reality.",
+  "data_provenance": "synthetic",
+  "frozen_values": {
+    "BETA": 0.95,
+    "C_LCFA_HALF": 1.2,
+    "C_TAN_HALF": 6.0,
+    "ETA_LCFA": 0.012,
+    "K_REF": 0.18,
+    "MISSING_RATE_PH": 0.02,
+    "MISSING_RATE_TEMP": 0.015,
+    "NOISE_SCALE": 1.0,
+    "RESPONSE_CENTRE": 1.0,
+    "SIGMA_REPLICATE": 0.05,
+    "SIGMA_SCENARIO": 0.04,
+    "TS_CENTRE": 12.0,
+    "TS_SHAPE": "peak",
+    "T_MESO_SIGMA": 10.0
+  },
+  "model_names": [
+    "ridge",
+    "hist_gradient_boosting"
+  ],
+  "n_rows": 30,
+  "n_scenarios": 250,
+  "nothing_else_swept": "Exactly the ten assumptions of SPEC_V1 11 were swept, three pre-declared levels each. No other constant, structural choice or analysis option was varied, which is what makes the sweep reproducible rather than exploratory.",
+  "runtime_s": 528.5,
+  "seed": 11,
+  "simulated": true,
+  "simulator_version": "SPEC_V1",
+  "solver": {
+    "max_iterations": 20,
+    "perturbation_draws": 20,
+    "population_size": 8
+  },
+  "sweep_scale_note": "Each sweep row re-runs generate -> fit -> optimise under one changed assumption at the sweep configuration recorded in this metadata. That configuration is a runtime choice and is not the study configuration: the sweep measures the sign and rough size of each effect, not its precise value at study size."
+}

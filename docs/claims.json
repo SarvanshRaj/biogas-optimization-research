@@ -1,0 +1,216 @@
+{
+ "schema": "claim_id | statement | class | polarity | confidence | status | evidence_ids | counter_ids | cite_ids | prereg_link | as_of | decay_class",
+ "as_of": "2026-10-07T06:58:37+00:00",
+ "claims": [
+  {
+   "claim_id": "C-001",
+   "statement": "Models trained on data from a self-written equation recover that equation's structure under noise; they provide no evidence about real digester behaviour.",
+   "class": "THEORETICAL",
+   "polarity": "rejects",
+   "confidence": 9,
+   "status": "active",
+   "evidence_ids": [
+    "C-007"
+   ],
+   "counter_ids": [],
+   "cite_ids": [
+    "CIT-0023",
+    "CIT-0021"
+   ],
+   "prereg_link": "PREREG_V1 \u00a72 circularity statement; \u00a77 P-C",
+   "as_of": "2026-10-07T06:58:37+00:00",
+   "decay_class": "stable"
+  },
+  {
+   "claim_id": "C-002",
+   "statement": "Lipid-rich substrates are reported to inhibit anaerobic digestion above a threshold (LCFA inhibition), making a unimodal response plausible for the simulator.",
+   "class": "EMPIRICAL",
+   "polarity": "supports",
+   "confidence": 8,
+   "status": "supported",
+   "evidence_ids": [],
+   "counter_ids": [],
+   "cite_ids": [
+    "CIT-0015",
+    "CIT-0014",
+    "CIT-0007"
+   ],
+   "prereg_link": "PREREG_V1 \u00a75 A1, \u00a77 P-B",
+   "as_of": "2026-10-07T06:58:37+00:00",
+   "decay_class": "slow",
+   "note": "Phase 1: threshold reports found in multiple independent sources, but the numeric value varies by a factor of ~3-5 (LCFA onset ~250-450 mg/L depending on acclimation; TAN IC50 19.0 g/L in one study vs 50%-inhibition reports spanning 1.7-14 g/L). Confidence raised to 8 for the PHENOMENON, not for the threshold value. CIT-0015 is PARTIAL (SSRN preprint only) and cannot alone carry a Key Finding."
+  },
+  {
+   "claim_id": "C-003",
+   "statement": "No retrieved study applies pure Aspergillus oryzae to food waste and then digests that same food waste; the closest matches are a two-fungus consortium naming A. oryzae (+55.87% biomethane, single study) and hydrolase produced by A. oryzae on food waste used to treat sludge.",
+   "class": "EMPIRICAL",
+   "polarity": "neutral",
+   "confidence": 5,
+   "status": "partial",
+   "evidence_ids": [],
+   "counter_ids": [],
+   "cite_ids": [
+    "CIT-0005",
+    "CIT-0007",
+    "CIT-0033",
+    "CIT-0028",
+    "CIT-0009"
+   ],
+   "prereg_link": "PREREG_V1 \u00a75 U1, \u00a77 P-A",
+   "as_of": "2026-10-07T06:58:37+00:00",
+   "decay_class": "slow",
+   "note": "Phase 1 outcome: F1 part-fires in the favourable direction. The pre-treatment factor stays a symmetric ASSUMPTION with range 0.70-1.60x; P-A moved 0.30 -> 0.40. A reverse coupling (fungus grown on digestion-derived VFAs, CIT-0033) is recorded so the literature is not misread as supporting this project's stage order."
+  },
+  {
+   "claim_id": "C-004",
+   "statement": "Reported effects of pre-treatment on methane from food waste act on the RATE of production at least as often as on the ultimate potential; the apparent size of an effect also depends on the measurement window.",
+   "class": "METHODOLOGICAL",
+   "polarity": "supports",
+   "confidence": 7,
+   "status": "supported",
+   "evidence_ids": [],
+   "counter_ids": [
+    "CIT-0007"
+   ],
+   "cite_ids": [
+    "CIT-0016",
+    "CIT-0031",
+    "CIT-0028",
+    "CIT-0009"
+   ],
+   "prereg_link": "PREREG_V1 section 5 A3; decision S-1 in addendum 02",
+   "as_of": "2026-10-07T06:58:37+00:00",
+   "decay_class": "slow",
+   "note": "CIT-0016: aerobic pretreatment changed rate (+22%) with no significant change in potential (~418 mL/g VS). CIT-0031: inoculum handling changed rates but not yield. Counter-branch: CIT-0028 measured a 41% change in cumulative biogas over 45 days, closer to extent at that window. Hence the endpoint is defined over an explicit window (S-1)."
+  },
+  {
+   "claim_id": "C-005",
+   "statement": "The direction of the high-solids effect in food-waste anaerobic digestion is contested: one study reports better performance up to 20% TS while another reports reduced specific methane yield at 20% TS.",
+   "class": "EMPIRICAL",
+   "polarity": "contested",
+   "confidence": 6,
+   "status": "contested",
+   "evidence_ids": [
+    "CIT-0006"
+   ],
+   "counter_ids": [
+    "CIT-0012"
+   ],
+   "cite_ids": [
+    "CIT-0006",
+    "CIT-0012"
+   ],
+   "prereg_link": "PREREG_V1 section 5 A2; parameter-table S5",
+   "as_of": "2026-10-07T06:58:37+00:00",
+   "decay_class": "slow",
+   "note": "Both claims verified at their source; neither is averaged away (Law 8). The simulator's TS response stays mild and its sensitivity is explored in Phase 4."
+  },
+  {
+   "claim_id": "C-006",
+   "statement": "A measured food-waste methane potential of 348 mL CH4/g VS at 10 days and 435 mL CH4/g VS at 28 days, with ~73% CH4 and 81% VS destruction, is a defensible magnitude anchor for the simulated scale.",
+   "class": "EMPIRICAL",
+   "polarity": "supports",
+   "confidence": 8,
+   "status": "supported",
+   "evidence_ids": [
+    "CIT-0003"
+   ],
+   "counter_ids": [],
+   "cite_ids": [
+    "CIT-0003"
+   ],
+   "prereg_link": "PREREG_V1 section 5 A5; parameter-table O1",
+   "as_of": "2026-10-07T06:58:37+00:00",
+   "decay_class": "slow",
+   "note": "Abstract-level source (V-META); the simulated distribution is centred on this anchor, and the simulated values remain synthetic."
+  },
+  {
+   "claim_id": "C-007",
+   "statement": "Models trained on real full-scale digester data have repeatedly failed to transfer between digesters, even with rich inputs.",
+   "class": "EMPIRICAL",
+   "polarity": "supports",
+   "confidence": 7,
+   "status": "supported",
+   "evidence_ids": [
+    "CIT-0023",
+    "CIT-0021"
+   ],
+   "counter_ids": [],
+   "cite_ids": [
+    "CIT-0023",
+    "CIT-0021",
+    "CIT-0022"
+   ],
+   "prereg_link": "PREREG_V1 section 2 circularity statement; report section 9 limitations",
+   "as_of": "2026-10-07T06:58:37+00:00",
+   "decay_class": "slow",
+   "note": "Direct support for the project's own limitation that synthetic-trained models cannot be claimed to transfer to real digesters. CIT-0023 states that models optimised for individual digesters were not transferable to other digesters. All three sources are PARTIAL (search-index excerpts), so this claim may appear in the limitations but not as a Key Finding."
+  },
+  {
+   "claim_id": "C-008",
+   "statement": "Ambient relative humidity has no retrieved support as a driver of slurry methane potential, so it is excluded from the simulator.",
+   "class": "METHODOLOGICAL",
+   "polarity": "rejects",
+   "confidence": 7,
+   "status": "supported",
+   "evidence_ids": [],
+   "counter_ids": [],
+   "cite_ids": [
+    "CIT-0004"
+   ],
+   "prereg_link": "PREREG_V1 section 5 A6; brief rule R14",
+   "as_of": "2026-10-07T06:58:37+00:00",
+   "decay_class": "stable",
+   "note": "Moisture is retained only as a reported feedstock cross-check (parameter-table S6). Absence of support is the finding; if a source later justifies an RH role, this claim must be reopened."
+  },
+  {
+   "claim_id": "C-009",
+   "statement": "The frozen specification's own section 4.1 sanity values do not all reproduce from its section 3.2/3.3 equations: five of thirteen anchors move by 6-74 mL/g VS, and the pre-treatment family is uniformly ~3 % high.",
+   "class": "COMPUTATIONAL (own artefact)",
+   "polarity": "rejects",
+   "confidence": 10,
+   "status": "active",
+   "evidence_ids": [
+    "C-010"
+   ],
+   "counter_ids": [],
+   "cite_ids": [],
+   "prereg_link": "SPEC_V1 section 4.1 vs sections 3.2/3.3; recorded as AD_HOC-01",
+   "as_of": "2026-10-07T09:45:00+00:00",
+   "decay_class": "own-artefact (re-verified whenever the simulator changes)"
+  },
+  {
+   "claim_id": "C-010",
+   "statement": "Re-deriving a specification's arithmetic is a stronger check than a green test suite: an extra inoculum factor contradicted the frozen equations while all 62 tests of the time passed.",
+   "class": "METHOD",
+   "polarity": "affirms",
+   "confidence": 9,
+   "status": "active",
+   "evidence_ids": [],
+   "counter_ids": [],
+   "cite_ids": [],
+   "prereg_link": "PREREG_V1 section 11 P10; R25 (TDD) and R17 (questions answered before code)",
+   "as_of": "2026-10-07T09:45:00+00:00",
+   "decay_class": "method (stable)"
+  },
+  {
+   "claim_id": "C-011",
+   "statement": "Under SPEC_V1 the inoculum-to-substrate ratio has no effect on the simulated yield (a flat descriptor by section 13.1), so a model trained on this data should assign it approximately zero importance - and that is a property of the simulator, not evidence about real digesters.",
+   "class": "SIMULATED (own artefact)",
+   "polarity": "affirms",
+   "confidence": 10,
+   "status": "active",
+   "evidence_ids": [
+    "C-001"
+   ],
+   "counter_ids": [],
+   "cite_ids": [
+    "CIT-0004"
+   ],
+   "prereg_link": "SPEC_V1 section 13.1; decision S-3 declares the I:S basis",
+   "as_of": "2026-10-07T09:45:00+00:00",
+   "decay_class": "own-artefact (re-verified whenever the simulator changes)"
+  }
+ ],
+ "note": "Phase 1 populated evidence_ids/cite_ids for C-001..C-003 and added C-004..C-008. C-003 stays 'partial': the exact hypothesis is still untested in the retrieved literature and the pre-treatment factor is an explicit assumption. C-007's sources are PARTIAL and therefore excluded from Key Findings per Law 18. Phase 3 added C-009..C-011: the specification's anchors do not all reproduce from its own equations (C-009, evidence C-010), and the I:S ratio is a declared no-op whose ~zero importance a model will show (C-011)."
+}

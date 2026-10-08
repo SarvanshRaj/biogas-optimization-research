@@ -1,0 +1,506 @@
+{
+ "schema": "cite_id | claim_ids | locator | retrieved | quote_checked | access_level | status | as_of | note",
+ "as_of": "2026-10-07T06:57:25+00:00",
+ "cites": [
+  {
+   "cite_id": "CIT-0001",
+   "claim_ids": [],
+   "locator": "arXiv:2406.06608 (https://arxiv.org/abs/2406.06608)",
+   "retrieved": true,
+   "quote_checked": true,
+   "status": "VERIFIED",
+   "as_of": "2026-10-07T06:22:01+00:00",
+   "note": "Schulhoff et al., 'The Prompt Report: A Systematic Survey of Prompt Engineering Techniques'; v1 2024-06-06, latest v6 2025-02-26; abstract retrieved and read. Used only as a prompt-engineering method reference, not as project science."
+  },
+  {
+   "cite_id": "CIT-0002",
+   "claim_ids": [],
+   "locator": "arXiv:2402.07927 (https://arxiv.org/abs/2402.07927)",
+   "retrieved": true,
+   "quote_checked": true,
+   "status": "VERIFIED",
+   "as_of": "2026-10-07T06:22:01+00:00",
+   "note": "Sahoo et al., 'A Systematic Survey of Prompt Engineering in Large Language Models: Techniques and Applications'; v1 2024-02-05, v2 2025-03-16; abstract retrieved and read."
+  }
+ ],
+ "research_cites": [
+  {
+   "cite_id": "CIT-0003",
+   "claim_ids": [
+    "C-006"
+   ],
+   "locator": "Zhang, R. et al. (2007) 'Characterization of food waste as feedstock for anaerobic digestion', Bioresource Technology 98(4):929-935. DOI 10.1016/j.biortech.2006.02.039 (metadata via Crossref)",
+   "retrieved": true,
+   "quote_checked": true,
+   "access_level": "abstract_only",
+   "status": "V-META",
+   "as_of": "2026-10-07T06:57:25+00:00",
+   "note": "First author Zhang; 2007; title/journal/volume/pages match the Crossref record. Indexed abstract content: FW moisture 74-90%, VS/TS 80-97%, C/N 14.7-36.4, 348 / 435 mL CH4/g VS at 10 / 28 d, ~73% CH4, 81% VS destruction at 28 d. Load-bearing for parameter-table S6-S8 and the O1 magnitude anchor. Full text not opened."
+  },
+  {
+   "cite_id": "CIT-0004",
+   "claim_ids": [
+    "C-008"
+   ],
+   "locator": "Filer, J., Ding, H.H., Chang, S. (2019) 'Biochemical Methane Potential (BMP) Assay Method for Anaerobic Digestion Research', Water 11(5):921. DOI 10.3390/w11050921 (opened at https://www.mdpi.com/2073-4441/11/5/921; metadata re-confirmed via Crossref)",
+   "retrieved": true,
+   "quote_checked": true,
+   "access_level": "open_full_text",
+   "status": "V-FULL",
+   "as_of": "2026-10-07T06:57:25+00:00",
+   "note": "Open access CC-BY. Source of the BMP unit convention (normalised CH4 volume per g VS at STP), 1 g COD = 0.35 L CH4 (STP) / 0.395 L at 35 C, cellulose control 415 mL CH4/g VS, VDI 4630-style practice of ~10 g VS/L and substrate-to-inoculum < 0.5. Basis of decision D4 (physical-unit adoption). The VDI standard itself (CIT-0017) was NOT retrieved."
+  },
+  {
+   "cite_id": "CIT-0005",
+   "claim_ids": [
+    "C-003"
+   ],
+   "locator": "Zhang, X. et al. (2023) 'Hydrolase Production via Food Waste Fermentation and Its Application to Enhance Anaerobic Digestion of Sewage Sludge', Fermentation 9(6):526. DOI 10.3390/fermentation9060526 (opened at https://www.mdpi.com/2311-5637/9/6/526; metadata re-confirmed via Crossref)",
+   "retrieved": true,
+   "quote_checked": true,
+   "access_level": "open_full_text",
+   "status": "V-FULL",
+   "as_of": "2026-10-07T06:57:25+00:00",
+   "note": "Food waste fermented (hydrolase enrichment) and added to waste activated sludge; methane 2140 -> 7187 mL with 30 g fermented FW per 200 g sludge; 24.3% of the gain attributed to the enriched hydrolase; BOD5/COD 0.33 -> 0.41. EXISTENCE evidence for Aspergillus oryzae x food waste, but the digested substrate is sludge - recorded as indirect (RH-01)."
+  },
+  {
+   "cite_id": "CIT-0006",
+   "claim_ids": [
+    "C-005"
+   ],
+   "locator": "Yi, J., Dong, B., Jin, J., Dai, X. (2014) 'Effect of Increasing Total Solids Contents on Anaerobic Digestion of Food Waste under Mesophilic Conditions', PLOS ONE 9(7):e102548. DOI 10.1371/journal.pone.0102548 (opened at journals.plos.org; metadata re-confirmed via Crossref)",
+   "retrieved": true,
+   "quote_checked": true,
+   "access_level": "open_full_text",
+   "status": "V-FULL",
+   "as_of": "2026-10-07T06:57:25+00:00",
+   "note": "5-20% TS tested in food-waste AD; wet <=10%, semi-dry 10-20%, dry >=20%. Higher TS within range gave better VS reduction and methane yield - the OPPOSITE direction to CIT-0012. Contradiction carried as claim C-005."
+  },
+  {
+   "cite_id": "CIT-0007",
+   "claim_ids": [
+    "C-003",
+    "C-004"
+   ],
+   "locator": "Chen, Y. et al. (2024) '...oriented microbial consortium...' Chemical Engineering Journal 486:150208. DOI 10.1016/j.cej.2024.150208 (metadata via Crossref)",
+   "retrieved": true,
+   "quote_checked": true,
+   "access_level": "abstract_only",
+   "status": "V-META",
+   "as_of": "2026-10-07T06:57:25+00:00",
+   "note": "Oriented microbial consortium-based compound enzyme (MCE) prepared IN SITU and applied to food waste: the consortium names Aspergillus oryzae as the protease generator and Aspergillus niger as the amylase generator, mixed at 1:100; biomethane 335.29 -> 423.46-522.61 mL/g VS (+55.87% at 1:100); the highest yield of 522.61 mL/g VS is the reported optimum. This is the CLOSEST retrieved match to the project hypothesis and the reason prior P-A moves rather than staying flat - but it is a two-fungus consortium with the ratio tuned, not Aspergillus oryzae alone, and a single study. Corrected this session after the failure-query pass revealed the Aspergillus oryzae attribution in the paper's highlights. Re-verify the full author list via Crossref before Phase 5 publication (only the first author was transcribed)."
+  },
+  {
+   "cite_id": "CIT-0008",
+   "claim_ids": [
+    "C-004"
+   ],
+   "locator": "Bong, C.P.C. et al. (2018) Journal of Cleaner Production 172. DOI 10.1016/j.jclepro.2017.10.199 (metadata via Crossref)",
+   "retrieved": true,
+   "quote_checked": true,
+   "access_level": "abstract_only",
+   "status": "V-META",
+   "as_of": "2026-10-07T06:57:25+00:00",
+   "note": "Food-waste bromatology from the indexed text: carbohydrate 11.8-74%, protein 13.8-18.1%, lipid 3.78-33.72% - the wide spread is why the simulated composition bands are central-region modelling choices (parameter-table S1-S3). Journal title/volume present in the Crossref record; page range not recorded."
+  },
+  {
+   "cite_id": "CIT-0009",
+   "claim_ids": [
+    "C-001",
+    "C-004"
+   ],
+   "locator": "Aworanti, O.A. et al. (2023) 'Anaerobic digestion of food waste: ...' Frontiers in Energy Research 11:1170133. DOI 10.3389/fenrg.2023.1170133 (opened at frontiersin.org)",
+   "retrieved": true,
+   "quote_checked": true,
+   "access_level": "open_full_text",
+   "status": "V-FULL",
+   "as_of": "2026-10-07T06:57:25+00:00",
+   "note": "Opened review (article text read via the publisher page and its indexed text; not read line-by-line) (Frontiers in Energy Research 11:1170133). Source for the four-step AD chain and governing factors; reports pretreatment gains of ~25-120% with fungal treatments commonly in the lower part of that range. Quotes TWO explicit negative findings: fungal pretreatment of agricultural biomass did not improve biomethane yield (Paul et al. 2018, cited therein) and fungal pretreatment is less effective than other pretreatment techniques (Kamusoko et al. 2019, cited therein). Also records Aspergillus/Sporotrichum/Penicillium/Fusarium pretreatment of orange processing waste increasing biogas (primary: Srilatha et al. 1995, NOT retrieved - that primary claim stays UNVERIFIED)."
+  },
+  {
+   "cite_id": "CIT-0010",
+   "claim_ids": [
+    "C-002"
+   ],
+   "locator": "Prasanna Kumar, S. et al. (2024) Biotechnology Notes 5:33-49. DOI 10.1016/j.biotno.2024.02.001 (metadata via Crossref)",
+   "retrieved": true,
+   "quote_checked": true,
+   "access_level": "abstract_only",
+   "status": "V-META",
+   "as_of": "2026-10-07T06:57:25+00:00",
+   "note": "Operating-parameter review: mesophilic 31-35 C, thermophilic 50-60 C (35 C called optimal), pH 6.8-7.2 optimal / ~6.5-8.5 acceptable, HRT ideal ~10-25 d (mesophilic 20-30, thermophilic ~15), washout below ~10 d, VFA >4 g/L manifests as reduced biogas. Load-bearing for D1-D4 and D8."
+  },
+  {
+   "cite_id": "CIT-0011",
+   "claim_ids": [
+    "C-005"
+   ],
+   "locator": "Chuenchart, W. et al. (2020) Biomass and Bioenergy 138:105541. DOI 10.1016/j.biombioe.2020.105541 (metadata via Crossref)",
+   "retrieved": true,
+   "quote_checked": true,
+   "access_level": "abstract_only",
+   "status": "V-META",
+   "as_of": "2026-10-07T06:57:25+00:00",
+   "note": "Thermophilic food-waste mono-digestion at OLR 1-4 kg VS/m3/d with VFA instability at higher loading; co-digestion improved yield by 33.2% at OLR 1 kg VS/m3/d. Also the ammonia-threshold spread recited in CIT-0014. Used for D3 and as a caution against OLR as a simple linear term."
+  },
+  {
+   "cite_id": "CIT-0012",
+   "claim_ids": [
+    "C-005"
+   ],
+   "locator": "Wang, Y. et al. (2020) Waste Management. DOI 10.1016/j.wasman.2020.06.048 (metadata via Crossref)",
+   "retrieved": true,
+   "quote_checked": true,
+   "access_level": "abstract_only",
+   "status": "V-META",
+   "as_of": "2026-10-07T06:57:25+00:00",
+   "note": "Co-digestion at 5-20% TS: specific methane yield 278.8-291.7 NmL/g VS added at 5-15% TS, 259.8 NmL/g VS at 20%; CH4 72.7-75.7%; TAN max 5293 mg/L; TVFA maxima reported. Opposes CIT-0006 on the direction of the high-solids effect (C-005)."
+  },
+  {
+   "cite_id": "CIT-0013",
+   "claim_ids": [
+    "C-004"
+   ],
+   "locator": "Braguglia, C.M. et al. (2018) Bioresource Technology. DOI 10.1016/j.biortech.2017.06.145 (metadata via Crossref)",
+   "retrieved": true,
+   "quote_checked": true,
+   "access_level": "abstract_only",
+   "status": "V-META",
+   "as_of": "2026-10-07T06:57:25+00:00",
+   "note": "Critical review of food-waste anaerobic digestion: background on limitations and process constraints. Metadata verified; used for background only, no load-bearing constant."
+  },
+  {
+   "cite_id": "CIT-0014",
+   "claim_ids": [
+    "C-002"
+   ],
+   "locator": "Poirier, S. et al. (2016) Bioresource Technology. DOI 10.1016/j.biortech.2016.01.124 (metadata via Crossref)",
+   "retrieved": true,
+   "quote_checked": true,
+   "access_level": "abstract_only",
+   "status": "V-META",
+   "as_of": "2026-10-07T06:57:25+00:00",
+   "note": "Ammonia inhibition in AD: total ammonia nitrogen IC50 of 19.0 g/L at 35 C; across studies, 50% inhibition reported from 1.7 to 14 g/L and thresholds of 1.1-11.8 g/L. Load-bearing for D7; the spread is itself the finding."
+  },
+  {
+   "cite_id": "CIT-0015",
+   "claim_ids": [
+    "C-002"
+   ],
+   "locator": "Szabo, B. et al. LCFA-inhibition review. SSRN preprints 10.2139/ssrn.4596248 and 10.2139/ssrn.4610927 (metadata via Crossref)",
+   "retrieved": true,
+   "quote_checked": true,
+   "access_level": "abstract_only",
+   "status": "PARTIAL",
+   "as_of": "2026-10-07T06:57:25+00:00",
+   "note": "Journal-of-record DOI was NOT resolved (ScienceDirect S2352186424000051 exists but its DOI was not confirmed). Preprint-level only: LCFA inhibition above ~250 mg/L for non-acclimated sludge, ~400-450 mg/L when acclimated, LCFA/VS ratios for onset and complete inhibition. Used for the D6 threshold with PARTIAL status - must not be cited as a peer-reviewed journal article."
+  },
+  {
+   "cite_id": "CIT-0016",
+   "claim_ids": [
+    "C-004"
+   ],
+   "locator": "Wu, C., Yu, M., Huang, Q., Ma, H., Gao, M., Wang, Q., Sakai, K. (2018) 'Stimulation of methane yield rate from food waste by aerobic pre-treatment', Bioresource Technology 261:279-287. DOI 10.1016/j.biortech.2018.04.006 (metadata via Crossref, resolved from the title this session)",
+   "retrieved": true,
+   "quote_checked": true,
+   "access_level": "abstract_only",
+   "status": "V-META",
+   "as_of": "2026-10-07T06:57:25+00:00",
+   "note": "KEY rate-versus-extent source: aerobic pre-treatment (2/5/8 d) produced no significant difference in methane yield potential (~418 mL/g VS, p>0.05) while a 5-day duration raised the methane production RATE by ~22%, at the cost of 2.6-9.9% COD loss. Drives decision S-1 and hypothesis-framing for the pre-treatment stage."
+  },
+  {
+   "cite_id": "CIT-0017",
+   "claim_ids": [
+    "C-009"
+   ],
+   "locator": "VDI 4630 (German standard) 'Fermentation of organic materials - characterisation of the substrate, sampling, collection of material data, fermentation tests'",
+   "retrieved": true,
+   "quote_checked": true,
+   "access_level": "not_retrieved",
+   "status": "UNVERIFIED",
+   "as_of": "2026-10-07T06:57:25+00:00",
+   "note": "NOT RETRIEVED - paywalled standard, and no open full text was reached through the access ladder (see access_log). Exists in this ledger ONLY to document the gap: all VDI 4630 values used in this project are quoted through the secondary, opened source CIT-0004 and are labelled as secondary. Never cite CIT-0017 for a number."
+  },
+  {
+   "cite_id": "CIT-0018",
+   "claim_ids": [
+    "C-001",
+    "C-004"
+   ],
+   "locator": "'A Review of Pretreatment Strategies for Anaerobic Digestion: Unlocking the Biogas Generation Potential of Wastes in Ghana' (2025), MDPI, ISSN 2813-0391, article 3(3):24 - https://www.mdpi.com/2813-0391/3/3/24",
+   "retrieved": true,
+   "quote_checked": true,
+   "access_level": "search_index_excerpt",
+   "status": "PARTIAL",
+   "as_of": "2026-10-07T06:57:25+00:00",
+   "note": "Snippet-level only; journal NAME not confirmed from the excerpt, so it is cited by ISSN/URL. Its comparison table gives willow sawdust: untreated 95.5 mL/g VS; Leiotrametes menziesii (30 d) about -34.7%; Abortiporus biennis (30 d) about +43.1%. That table is the origin of the +/- figures quoted in the review document; the underlying primary numbers were not re-derived. It also notes a meta-analysis was not feasible due to heterogeneity."
+  },
+  {
+   "cite_id": "CIT-0019",
+   "claim_ids": [
+    "C-001",
+    "C-004"
+   ],
+   "locator": "'Fungal Pretreatment of Willow Sawdust with Abortiporus biennis for Anaerobic Digestion: Impact of an External Nitrogen Source', MDPI Sustainability 9(1):130 - https://mdpi.com/2071-1050/9/1/130/htm",
+   "retrieved": true,
+   "quote_checked": true,
+   "access_level": "search_index_excerpt",
+   "status": "PARTIAL",
+   "as_of": "2026-10-07T06:57:25+00:00",
+   "note": "Snippet-level only. Abstract excerpt states that with nitrogen supplementation 'a reduction in methane yield was observed, compared to the control experiment' - the harmful direction for a fungal pretreatment, on a lignocellulosic substrate. Used only to establish that the SIGN of the fungal effect is not fixed."
+  },
+  {
+   "cite_id": "CIT-0020",
+   "claim_ids": [
+    "C-004"
+   ],
+   "locator": "'Microorganisms and Enzymes Used in the Biological Pretreatment of the Substrate to Enhance Biogas Production: A Review', MDPI Sustainability 12(17):7205 - https://www.mdpi.com/2071-1050/12/17/7205",
+   "retrieved": true,
+   "quote_checked": true,
+   "access_level": "search_index_excerpt",
+   "status": "PARTIAL",
+   "as_of": "2026-10-07T06:57:25+00:00",
+   "note": "Snippet-level only. Tabulates A. biennis +43% and states L. menziesii did not enhance methane potential; also reports a +154% methane increase and 339.31 mL/g VS from another fungal pretreatment. Example of the publication asymmetry noted at iceberg L5."
+  },
+  {
+   "cite_id": "CIT-0021",
+   "claim_ids": [
+    "C-007"
+   ],
+   "locator": "'Interpretable machine learning for predicting biomethane production in industrial-scale anaerobic co-digestion' (2019/2020), Elsevier - https://www.sciencedirect.com/science/article/abs/pii/S0048969719345656",
+   "retrieved": true,
+   "quote_checked": true,
+   "access_level": "search_index_excerpt",
+   "status": "PARTIAL",
+   "as_of": "2026-10-07T06:57:25+00:00",
+   "note": "Snippet of abstract + highlights. Four years of industrial ACoD process data: elastic net (linear) reached out-of-sample R2 0.85 at a 1-day horizon and degraded with longer horizons, while random forest and XGBoost held OSR2 0.80-0.88 across horizons. Used as context for expectations, never as a performance target. Full text paywalled; journal name/volume not recorded."
+  },
+  {
+   "cite_id": "CIT-0022",
+   "claim_ids": [
+    "C-007"
+   ],
+   "locator": "'Machine Learning Prediction and Process Optimization for Enhanced Methane Production from Straw Anaerobic Digestion with Biochar', MDPI Sustainability 18(2):609 - https://www.mdpi.com/2071-1050/18/2/609",
+   "retrieved": true,
+   "quote_checked": true,
+   "access_level": "search_index_excerpt",
+   "status": "PARTIAL",
+   "as_of": "2026-10-07T06:57:25+00:00",
+   "note": "Snippet-level. 100 samples, 15 inputs; RF best with R2 0.81 and RMSE 36.9; SVM biased in extreme ranges; feature importance led by feeding load, biochar dose and biochar C% (65.7% combined). Cited as an example of the field's typical study size, not as a target."
+  },
+  {
+   "cite_id": "CIT-0023",
+   "claim_ids": [
+    "C-007"
+   ],
+   "locator": "'Microbial community biomarkers can forecast methane production in full-scale anaerobic digesters' (2026), Elsevier - https://www.sciencedirect.com/science/article/abs/pii/S0301479726002884",
+   "retrieved": true,
+   "quote_checked": true,
+   "access_level": "search_index_excerpt",
+   "status": "PARTIAL",
+   "as_of": "2026-10-07T06:57:25+00:00",
+   "note": "Snippet of abstract/highlights. Three replicate full-scale digesters, 42 physicochemical parameters plus DNA/RNA; RF models reached only moderate R2; 'models optimized for individual digesters were not transferable to other digesters'; authors estimate 150-200 samples for stable prediction. The strongest transferability warning in the set and a direct support for the report's limitations."
+  },
+  {
+   "cite_id": "CIT-0024",
+   "claim_ids": [
+    "C-008"
+   ],
+   "locator": "permies.com biogas forum threads",
+   "retrieved": true,
+   "quote_checked": true,
+   "access_level": "search_index_excerpt",
+   "status": "PARTIAL",
+   "as_of": "2026-10-07T06:57:25+00:00",
+   "note": "UGC, context tier only. Practitioner theme: temperature dominates outcomes ('at about 20 C they pretty much stop'), and digesters must be far larger than beginners expect. No constant rests on this."
+  },
+  {
+   "cite_id": "CIT-0025",
+   "claim_ids": [
+    "C-008"
+   ],
+   "locator": "Reddit r/Permaculture, 'has anyone had success creating their own biogas digester?'",
+   "retrieved": true,
+   "quote_checked": true,
+   "access_level": "search_index_excerpt",
+   "status": "PARTIAL",
+   "as_of": "2026-10-07T06:57:25+00:00",
+   "note": "UGC, context tier only. Practitioner themes: pressure-tightness/'leaks' named as the hardest build problem; ~25 C quoted as a minimum; burner and piping corrosion from moisture and H2S. No constant rests on this."
+  },
+  {
+   "cite_id": "CIT-0026",
+   "claim_ids": [
+    "C-008"
+   ],
+   "locator": "Reddit r/Wastewater, operator thread on digester heat loss",
+   "retrieved": true,
+   "quote_checked": true,
+   "access_level": "search_index_excerpt",
+   "status": "PARTIAL",
+   "as_of": "2026-10-07T06:57:25+00:00",
+   "note": "UGC, context tier only. Professional practice: mesophilic digesters held near 35-37 C; ~1 C/day loss treated as a warning sign - consistent with the sourced optimum bands."
+  },
+  {
+   "cite_id": "CIT-0027",
+   "claim_ids": [
+    "C-008"
+   ],
+   "locator": "ResearchGate Q&A on heating small digesters",
+   "retrieved": true,
+   "quote_checked": true,
+   "access_level": "search_index_excerpt",
+   "status": "PARTIAL",
+   "as_of": "2026-10-07T06:57:25+00:00",
+   "note": "UGC, context tier only. The same temperature problem appears in the professional Q&A layer. No constant rests on this."
+  },
+  {
+   "cite_id": "CIT-0028",
+   "claim_ids": [
+    "C-003",
+    "C-004"
+   ],
+   "locator": "Gandhi, P., Paritosh, K., Pareek, N., Mathur, S., Lizasoain, J., Gronauer, A., Bauer, A., Vivekanand, V. (2018) 'Multicriteria Decision Model and Thermal Pretreatment of Hotel Food Waste for Robust Output to Biogas: Case Study from City of Jaipur, India', BioMed Research International 2018:9416249. DOI 10.1155/2018/9416249; opened at https://pmc.ncbi.nlm.nih.gov/articles/PMC6165605/ (PMCID PMC6165605)",
+   "retrieved": true,
+   "quote_checked": true,
+   "access_level": "open_full_text_partial",
+   "status": "V-FULL",
+   "as_of": "2026-10-07T06:57:25+00:00",
+   "note": "OPEN ACCESS CC-BY; abstract + introduction read in full, results section not read. Indian (Jaipur) hotel food waste; 45-day batch assay at 37 C; thermal pretreatment 60/80/100 C for 10/20 min; total cumulative biogas 41% higher than control at 100 C/10 min; Modified Gompertz and Logistic models used for lag time and yield. Its introduction lists food/kitchen-waste pretreatment outcomes from -7.5% CH4 and -11.7% (vegetable waste) up to +41%/+40%/+24%, with high severity the harmful direction (melanoidin formation). The ONLY primary Indian food-waste AD source retrieved with a usable locator."
+  },
+  {
+   "cite_id": "CIT-0029",
+   "claim_ids": [
+    "C-008"
+   ],
+   "locator": "Ministry of New and Renewable Energy (India), 'Frequently Asked Questions' - https://mnre.gov.in/en/faq/",
+   "retrieved": true,
+   "quote_checked": true,
+   "access_level": "search_index_excerpt",
+   "status": "PARTIAL",
+   "as_of": "2026-10-07T06:57:25+00:00",
+   "note": "Official government source, context tier. Indexed excerpt: potential of about 12 million family-type biogas plants based on estimated cattle-dung availability; 4.31 million installed; NBMMP running since 1981-82; an APITCO evaluation (2008-09) found 95.81% of surveyed plants operational. Used ONLY to characterise the national context; no simulator constant derives from it."
+  },
+  {
+   "cite_id": "CIT-0030",
+   "claim_ids": [
+    "C-008"
+   ],
+   "locator": "'Barriers to biogas dissemination in India: A review' (2018), Elsevier - https://www.sciencedirect.com/science/article/pii/S0301421517306869",
+   "retrieved": true,
+   "quote_checked": true,
+   "access_level": "search_index_excerpt",
+   "status": "PARTIAL",
+   "as_of": "2026-10-07T06:57:25+00:00",
+   "note": "Snippet of abstract + introduction. Total Indian biogas production ~2.07 billion m3/year against an estimated potential of 29-48 billion m3/year; family plants 1-10 m3 biogas/day, primarily cattle manure and agricultural waste; ~5 million family plants installed (about 40% of the MNRE 12-million estimate); 400 off-grid power plants ~5.5 MW. Journal name inferred from the PII ISSN prefix (0301-4215 = Energy Policy) and NOT independently confirmed, so the locator is the URL. Context tier only."
+  },
+  {
+   "cite_id": "CIT-0031",
+   "claim_ids": [
+    "C-004"
+   ],
+   "locator": "Raposo, F. et al. (2012) 'Biochemical methane potential (BMP) of food waste and primary sludge: Influence of inoculum pre-incubation and inoculum source', Bioresource Technology - https://www.sciencedirect.com/science/article/abs/pii/S0960852412000314",
+   "retrieved": true,
+   "quote_checked": true,
+   "access_level": "search_index_excerpt",
+   "status": "PARTIAL",
+   "as_of": "2026-10-07T06:58:11+00:00",
+   "note": "Snippet of abstract + highlights: pre-incubated vs non-incubated inoculum gave NO significant difference in methane yield (avg 114 mL CH4/g TCOD) or biodegradability (avg 28.3%) for primary sludge, while maximum methane production RATES were higher with non-incubated inoculum at all S/X ratios; the highlights also note the seed source underestimates ultimate biodegradability. Cited as a BMP-methods instance of the rate-versus-extent pattern (C-004) and as support for treating I:S as a convention, not a constant."
+  },
+  {
+   "cite_id": "CIT-0032",
+   "claim_ids": [
+    "C-001"
+   ],
+   "locator": "'Fungal pretreatment methods for organic wastes: advances and challenges in biomass valorization' (2025), Elsevier - https://www.sciencedirect.com/org/science/article/pii/S2753812525000394",
+   "retrieved": true,
+   "quote_checked": true,
+   "access_level": "search_index_excerpt",
+   "status": "PARTIAL",
+   "as_of": "2026-10-07T06:58:11+00:00",
+   "note": "Snippet-level. Reports that fungal pretreatment of agricultural substrates has BOTH signs: corn-silage biogas was enhanced by Pleurotus ostreatus and Dichomitus squalens while Trametes versicolor and Irpex lacteus showed a NEGATIVE impact; short pretreatment times recommended for cellulose-rich substrates; a park-waste/cattle-dung case improved biogas by 22.7% (102.6 -> 125.9 L/kg VS). Used only to establish sign variability."
+  },
+  {
+   "cite_id": "CIT-0033",
+   "claim_ids": [
+    "C-003"
+   ],
+   "locator": "'Cultivation of edible filamentous fungus Aspergillus oryzae ... using VFAs derived from anaerobic digestion of food waste' (2021), DiVA open repository - https://www.diva-portal.org/smash/get/diva2:1588821/FULLTEXT01.pdf",
+   "retrieved": true,
+   "quote_checked": true,
+   "access_level": "search_index_excerpt",
+   "status": "PARTIAL",
+   "as_of": "2026-10-07T06:58:11+00:00",
+   "note": "Snippet-level, open PDF. Establishes a SECOND, REVERSE coupling between Aspergillus oryzae and food waste: the fungus is grown on volatile fatty acids produced BY anaerobic digestion of food waste, to make edible fungal biomass. This is the opposite direction to this project's hypothesis (fungus first, then digestion) and is recorded to show the literature contains both couplings - but not the project's specific one."
+  },
+  {
+   "cite_id": "CIT-0034",
+   "claim_ids": [
+    "C-001"
+   ],
+   "locator": "'Physico-chemical pretreatment and fungal biotreatment for park wastes and cattle dung for biogas production' (2015), PMC4654729 - https://pmc.ncbi.nlm.nih.gov/articles/PMC4654729/",
+   "retrieved": true,
+   "quote_checked": true,
+   "access_level": "search_index_excerpt",
+   "status": "PARTIAL",
+   "as_of": "2026-10-07T06:58:11+00:00",
+   "note": "Snippet-level, open access. Combined alkaline + 7-day fungal treatment of park waste and cattle dung raised cumulative biogas from 102.6 to 125.9 L/kg VS (+22.7%); the paper also states that long pretreatment times are the main disadvantage of biological pretreatment because hydrolysis is slow. Analogous substrate, used for the direction-of-effect and time-cost context only."
+  }
+ ],
+ "note": "Phase 1 populated research_cites (CIT-0003..CIT-0034, 32 records) under genome Law 18. Statuses: V-FULL = record opened and cited section read; V-META = Crossref-verified metadata with publisher abstract/highlights read but full text not obtained; PARTIAL = search-index excerpt or secondary table only; UNVERIFIED = not retrieved (CIT-0017 exists solely to document that the VDI 4630 standard could not be opened). leads_not_cited records six items whose content was seen but whose locator was not captured: under Law 18 none may be cited, so they are listed as leads, not references. No Phase 5 Key Finding may rest on a PARTIAL or UNVERIFIED cite (research test R-C2). The failure-query pass (R-F1) added CIT-0031..CIT-0034 and corrected CIT-0007: the consortium it tests names Aspergillus oryzae explicitly.",
+ "leads_not_cited": [
+  {
+   "lead_id": "LEAD-01",
+   "content": "Indian hotel-kitchen food waste composition (Pune): starch ~7.27%, free sugars ~3.39%, protein ~7.99%, fat ~12.84%",
+   "reason": "Locator not captured when the content was recorded; would have been a third Indian evidence item. NOT cited in any document. Recovery deferred to Phase 2 (bounded)."
+  },
+  {
+   "lead_id": "LEAD-02",
+   "content": "Aspergillus strain PAD-2 cultivated on food waste to make a fungal mash, then used with free nitrous acid to pretreat sludge; ~416 +/- 11 mL CH4/g VS and lag time cut 80%",
+   "reason": "Strongly on-topic but the locator was not captured. NOT cited. This is exactly the failure the corrective rule in Addendum 02 A2.5 addresses."
+  },
+  {
+   "lead_id": "LEAD-03",
+   "content": "Enzymatic pretreatment raising methane yield from ~210 to ~270 NmL CH4/g VS with longer lag phases",
+   "reason": "Locator not captured; removed from the review document rather than cited from memory."
+  },
+  {
+   "lead_id": "LEAD-04",
+   "content": "Commercial-scale digester random-forest prediction 'accuracy 0.91' and a microbial-community random-forest R2 of 0.9879",
+   "reason": "Both numbers appeared in earlier search results without captured locators; DROPPED rather than cited. The replacement, located context is CIT-0021/CIT-0022/CIT-0023."
+  },
+  {
+   "lead_id": "LEAD-05",
+   "content": "Review of food-waste management in developing countries reporting carbohydrate ~41-62%, protein ~15-25%, lipid ~13-30%",
+   "reason": "Locator not captured; the composition bands are instead anchored on CIT-0008 and CIT-0003, which were verified."
+  },
+  {
+   "lead_id": "LEAD-06",
+   "content": "World Biogas Association / India country deck figures (about 5 million family plants against 12 million potential; CSIR-IICT anaerobic gas-lift reactor yields of ~70-80 m3 biogas per tonne of organic fraction of municipal solid waste)",
+   "reason": "Grey literature surfaced without a stable locator; SUPERSEDED by the official CIT-0029 and the peer-reviewed CIT-0030, which carry the same class of figure with real locators."
+  }
+ ],
+ "constant_provenance": {
+  "as_of": "2026-10-07T09:45:00+00:00",
+  "note": "Which constant in src/config.py traces to which ledger record. `ASSUMPTION` entries are declared modelling choices with a sensitivity range, not retrieved values; the frozen spectrum of these is SPEC_V1 section 4.",
+  "map": {
+   "K_CARB/K_PROT/K_LIP": "ASSUMPTION (textbook stoichiometric potentials, not retrieved this session; +/-15 %)",
+   "BETA (0.95)": "ASSUMPTION calibrated against the measured band in CIT-0003",
+   "VS_TS (0.85)": "CIT-0003 (measured VS/TS 83-87 %)",
+   "K_REF (0.18 /d)": "ASSUMPTION calibrated (SPEC_V1 section 4); the 20 C statement is a rate ratio",
+   "T_MESO_CENTRE / T_THERMO_CENTRE": "CIT-0010, CIT-0011 (bands); widths are ASSUMPTIONs",
+   "PH_LOW/PH_HIGH (6.8-7.2)": "CIT-0010; the 0.7 decay scale is an ASSUMPTION",
+   "OLR range and centre": "CIT-0011; shape ASSUMPTION",
+   "TS range": "CIT-0006, CIT-0012 (contradictory direction carried as claim C-005)",
+   "HRT range": "CIT-0010",
+   "Inoculum basis (g VS/g VS)": "CIT-0004; the quantity is a declared flat descriptor (no yield effect)",
+   "C_LCFA_HALF (1.2 g/L)": "ASSUMPTION informed by CIT-0015 (onset 250-450 mg/L)",
+   "C_TAN_HALF (6.0 g/L)": "ASSUMPTION informed by CIT-0014; the conflict with the retrieved IC50 is carried",
+   "ETA_LCFA (0.012)": "ASSUMPTION calibrated (SPEC_V1 section 4)",
+   "PROTEIN_N_FRACTION/RELEASE": "ASSUMPTION",
+   "PRETREATMENT_TAU_H (36 h) and the 0-96 h range": "ASSUMPTION (scaling choice; SPEC_V1 section 3.1)",
+   "R range 0.70-1.60 (symmetric)": "ASSUMPTION built from the mixed evidence: CIT-0007 (+55.87 %) vs CIT-0009 nulls vs CIT-0033 (reverse coupling)",
+   "Noise (0.04 scenario / 0.05 replicate), missingness (2 %/1.5 %), rounding": "ASSUMPTION (realism choices, SPEC_V1 sections 3.5-3.6)",
+   "Output unit mL CH4/g VS (STP)": "CIT-0004 (BMP reporting convention; scale adoption, no protocol implemented) - guard-rail test D-SCH-06"
+  }
+ }
+}

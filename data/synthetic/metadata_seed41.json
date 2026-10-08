@@ -1,0 +1,13 @@
+{
+  "data_provenance": "synthetic",
+  "simulator_version": "SPEC_V1",
+  "marker": "SIMULATED",
+  "seed": 41,
+  "n_rows": 4000,
+  "n_scenarios": 500,
+  "n_replicates": 8,
+  "as_of": "2026-10-07",
+  "scale_adoption_note": "SIMULATED quantity. The unit mL CH4/g VS (STP) is a scale adoption from the BMP reporting convention documented in CIT-0004 (Filer et al. 2019, Water 11(5):921); the internal computation is scale-free and the unit is applied once, as a declared conversion. This value is not a measurement.",
+  "bmp_protocol": "No BMP protocol is implemented: there is no inoculum pre-incubation, no 10 g VS/L loading rule, no 30-day incubation constraint and no positive control. The simulation only borrows the reporting unit.",
+  "source": "docs/model_specification.md (SPEC_V1)"
+}

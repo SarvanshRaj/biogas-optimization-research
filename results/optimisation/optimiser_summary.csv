@@ -1,0 +1,17 @@
+tier,tier_label,arm,model,true_yield,predicted_yield,gap,f5_fires,feasible,oracle_beats_reference,simulated,simulator_version
+C1,achievable at home (tier C1),oracle,-,513.9167518545333,,,True,True,True,SIMULATED,SPEC_V1
+C1,achievable at home (tier C1),random_search,-,439.19330481957405,,,True,True,True,SIMULATED,SPEC_V1
+C1,achievable at home (tier C1),baseline,-,313.6987907296185,,,False,False,True,SIMULATED,SPEC_V1
+C1,achievable at home (tier C1),surrogate,dummy,314.2144713403706,115.14861764705884,-199.06585369331177,True,True,True,SIMULATED,SPEC_V1
+C1,achievable at home (tier C1),surrogate,ridge,212.07659009712853,312.17222641984,100.09563632271147,True,True,True,SIMULATED,SPEC_V1
+C1,achievable at home (tier C1),surrogate,random_forest,420.1668039848314,496.7396180555551,76.57281407072372,False,True,True,SIMULATED,SPEC_V1
+C1,achievable at home (tier C1),surrogate,hist_gradient_boosting,429.1623229151605,510.65817487404047,81.49585195888,False,True,True,SIMULATED,SPEC_V1
+C1,achievable at home (tier C1),surrogate,mlp,343.994796643512,524.1900284825861,180.19523183907404,True,True,True,SIMULATED,SPEC_V1
+C1+C2,laboratory recommendation (tiers C1 + C2),oracle,-,513.7612822725584,,,True,True,True,SIMULATED,SPEC_V1
+C1+C2,laboratory recommendation (tiers C1 + C2),random_search,-,439.9232799460675,,,False,True,True,SIMULATED,SPEC_V1
+C1+C2,laboratory recommendation (tiers C1 + C2),baseline,-,313.6987907296185,,,False,False,True,SIMULATED,SPEC_V1
+C1+C2,laboratory recommendation (tiers C1 + C2),surrogate,dummy,17.992367972843144,115.14861764705884,97.1562496742157,True,True,True,SIMULATED,SPEC_V1
+C1+C2,laboratory recommendation (tiers C1 + C2),surrogate,ridge,25.22770145575436,430.16720446081354,404.9395030050592,True,True,True,SIMULATED,SPEC_V1
+C1+C2,laboratory recommendation (tiers C1 + C2),surrogate,random_forest,421.16328906553395,517.4291346861474,96.2658456206135,False,True,True,SIMULATED,SPEC_V1
+C1+C2,laboratory recommendation (tiers C1 + C2),surrogate,hist_gradient_boosting,429.6560454686258,509.42901076466956,79.77296529604376,False,True,True,SIMULATED,SPEC_V1
+C1+C2,laboratory recommendation (tiers C1 + C2),surrogate,mlp,360.737225827375,584.1300379621248,223.39281213474976,True,True,True,SIMULATED,SPEC_V1
